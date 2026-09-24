@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#5b247b">
+  <meta name="description" content="An interactive study studio for NCERT Psychology Chapter 4: Psychological Disorders.">
+  <title>Psychological Disorders · Chapter 4</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%235b247b'/%3E%3Cpath d='M32 41C19 33 20 21 25 14c7 5 8 12 7 27Zm0 0c13-8 12-20 7-27-7 5-8 12-7 27Zm0-1C25 28 29 17 32 11c3 6 7 17 0 29Z' fill='%23ff9acb'/%3E%3Cpath d='M19 27c1 8 5 13 13 16M45 27c-1 8-5 13-13 16M32 42v10' fill='none' stroke='%23ff9acb' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-icon"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 41C19 33 20 21 25 14c7 5 8 12 7 27Zm0 0c13-8 12-20 7-27-7 5-8 12-7 27Zm0-1C25 28 29 17 32 11c3 6 7 17 0 29Z" fill="currentColor"/><path d="M19 27c1 8 5 13 13 16M45 27c-1 8-5 13-13 16M32 42v10" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></span><div><strong>Chapter 4</strong></div></div>
+      <nav class="nav" aria-label="Study sections">
+        <button class="nav-item active" data-view="home"><span>✦</span> Study desk</button>
+        <button class="nav-item" data-view="notes"><span>▤</span> Quick notes</button>
+        <button class="nav-item" data-view="map"><span>◎</span> Mind map</button>
+        <button class="nav-item" data-view="cards"><span>▣</span> Flashcards</button>
+        <button class="nav-item" data-view="quiz"><span>✎</span> Quiz arcade</button>
+        <button class="nav-item" data-view="match"><span>◇</span> Match lab</button>
+      </nav>
+      <div class="sidebar-bottom"><div class="mini-progress"><div class="progress-label"><span>Your study progress</span><b id="sidePercent">0%</b></div><div class="track"><span id="sideBar"></span></div></div><a class="source-link" href="https://ncert.nic.in/textbook/pdf/lepy104.pdf" target="_blank" rel="noopener">↗ Open the chapter PDF</a></div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar"><div class="mobile-brand"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 41C19 33 20 21 25 14c7 5 8 12 7 27Zm0 0c13-8 12-20 7-27-7 5-8 12-7 27Zm0-1C25 28 29 17 32 11c3 6 7 17 0 29Z" fill="currentColor"/><path d="M19 27c1 8 5 13 13 16M45 27c-1 8-5 13-13 16M32 42v10" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg><strong>Chapter 4</strong></div></header>
+      <div class="mobile-nav" aria-label="Study sections"><button class="active" data-view="home">Desk</button><button data-view="notes">Notes</button><button data-view="map">Map</button><button data-view="cards">Cards</button><button data-view="quiz">Quiz</button><button data-view="match">Match</button></div>
+
+      <section class="view active" id="view-home" aria-labelledby="home-title">
+        <div class="hero"><div class="hero-copy"><span class="eyebrow">THE STUDY DESK ✦</span><h1 id="home-title">Psychological<br><em>Disorders</em></h1><p>A big chapter, made easier to see, remember, and practise. Start with the essentials, then test what sticks.</p><div class="hero-actions"><button class="primary" data-goto="notes">Explore notes <span>→</span></button><button class="ghost" data-goto="quiz">Try a quick quiz <span>↗</span></button></div></div><div class="hero-orbit" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="hero-center">4<span>Ds</span></div><span class="orbit-tag tag-a">deviance</span><span class="orbit-tag tag-b">distress</span><span class="orbit-tag tag-c">dysfunction</span><span class="orbit-tag tag-d">danger</span></div></div>
+        <div class="section-heading"><div><span class="eyebrow">YOUR ROUTE</span><h2>Pick a way to learn</h2></div><p>Every activity is based on the attached chapter.</p></div>
+        <div class="route-grid"><button class="route-card" data-goto="notes"><span class="route-icon pink">▤</span><strong>Understand it</strong><span>Short, exam-ready notes and key distinctions.</span><b>Open notes →</b></button><button class="route-card" data-goto="map"><span class="route-icon purple">◎</span><strong>See the big picture</strong><span>Tap through a map of ideas and disorders.</span><b>Explore map →</b></button><button class="route-card" data-goto="cards"><span class="route-icon orange">▣</span><strong>Recall it</strong><span>Flip cards and mark what needs another look.</span><b>Flip cards →</b></button><button class="route-card" data-goto="quiz"><span class="route-icon blue">✎</span><strong>Apply it</strong><span>Answer questions and learn from each explanation.</span><b>Play quiz →</b></button></div>
+        <div class="desk-bottom"><div class="focus-card"><span class="eyebrow">HIGH-YIELD CHECKLIST</span><h3>What to know cold</h3><div id="checklist"></div></div><div class="gentle-card"><span class="gentle-symbol">♡</span><h3>Study with care</h3><p>These descriptions help you learn concepts. A few signs do not diagnose anyone, and real assessment requires a trained professional.</p><div class="progress-big"><strong id="homePercent">0%</strong><span>of key topics you marked reviewed</span></div></div></div>
+      </section>
+
+      <section class="view" id="view-notes" aria-labelledby="notes-title"><div class="view-intro"><span class="eyebrow">01 / UNDERSTAND</span><h1 id="notes-title">Quick notes <em>without the overwhelm</em></h1><p>Learn the chapter in small, useful pieces. Select a topic or search the notes.</p></div><div class="notes-tools"><label class="search-wrap"><span>⌕</span><input id="noteSearch" type="search" placeholder="Search a term, symptom, or model…" aria-label="Search notes"></label><span id="notesCount"></span></div><div class="notes-layout"><div class="topic-list" id="topicList" aria-label="Note topics"></div><article class="note-detail" id="noteDetail"></article></div></section>
+
+      <section class="view" id="view-map" aria-labelledby="map-title"><div class="view-intro"><span class="eyebrow">02 / CONNECT</span><h1 id="map-title">The chapter <em>at a glance</em></h1><p>Choose a branch to see how the ideas fit together.</p></div><div class="map-layout"><div class="map-board"><div class="map-core">Psychological<br><strong>Disorders</strong></div><div class="map-nodes" id="mapNodes"></div></div><div class="map-explainer" id="mapExplainer"></div></div><div class="map-tip">✦ Try telling the story of each branch aloud before opening its notes.</div></section>
+
+      <section class="view" id="view-cards" aria-labelledby="cards-title"><div class="view-intro"><span class="eyebrow">03 / RECALL</span><h1 id="cards-title">Flashcard <em>garden</em></h1><p>Say the answer first, then flip. Cards you mark “Again” return later in the deck.</p></div><div class="study-toolbar"><label>Deck <select id="deckFilter"><option value="all">All topics</option><option value="basics">Core ideas</option><option value="models">Models</option><option value="disorders">Disorders</option></select></label><span id="cardCounter"></span></div><button class="flashcard" id="flashcard" aria-label="Flip flashcard"><div class="flash-inner"><div class="flash-face flash-front" aria-hidden="false"><span class="card-kicker" id="cardCategory"></span><span class="card-prompt" id="cardQuestion"></span><span class="flip-hint">Tap to reveal ↻</span></div><div class="flash-face flash-back" aria-hidden="true"><span class="card-kicker">THE ANSWER</span><span class="card-answer" id="cardAnswer"></span><span class="flip-hint">Tap to see question ↻</span></div></div></button><div class="card-actions"><button class="secondary" id="cardAgain">↶ Again later</button><button class="primary" id="cardGotIt">Got it ✓</button></div><p class="small-tip" id="cardStatus" aria-live="polite"></p></section>
+
+      <section class="view" id="view-quiz" aria-labelledby="quiz-title"><div class="view-intro"><span class="eyebrow">04 / APPLY</span><h1 id="quiz-title">Quiz <em>arcade</em></h1><p>Mix memory with scenarios. Each answer comes with a reason, so a mistake still teaches you.</p></div><div class="quiz-wrap"><div class="quiz-head"><span id="quizNumber">Question 1</span><span id="quizScore">0 correct</span></div><div class="quiz-progress"><span id="quizProgress"></span></div><div id="quizBody"></div><div class="quiz-footer"><button class="secondary" id="quizRestart">Restart round</button><button class="primary" id="quizNext" disabled>Next question →</button></div></div></section>
+
+      <section class="view" id="view-match" aria-labelledby="match-title"><div class="view-intro"><span class="eyebrow">05 / PLAY</span><h1 id="match-title">Match <em>lab</em></h1><p>Pair a term with its meaning. Select one from each side; matched pairs disappear together.</p></div><div class="match-wrap"><div class="match-meta"><strong id="matchScore">0 / 6 paired</strong><button class="text-button" id="matchReset">New round ↻</button></div><div class="match-columns"><div id="matchTerms" aria-label="Terms"></div><div id="matchDefinitions" aria-label="Definitions"></div></div><div id="matchMessage" class="match-message" aria-live="polite">Choose a term to begin.</div></div></section>
+
+      <footer>Made from the attached NCERT Psychology Chapter 4 PDF · <a href="https://ncert.nic.in/textbook/pdf/lepy104.pdf" target="_blank" rel="noopener">Read the source chapter ↗</a></footer>
+    </main>
+  </div>
+</body>
+</html>
