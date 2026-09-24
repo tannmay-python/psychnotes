@@ -8,3 +8,41 @@
 .brand-icon svg{width:29px;height:29px}
 .topbar{display:none}
 @media(max-width:760px){.topbar{display:flex}.mobile-brand{display:flex;align-items:center;gap:7px}.mobile-brand svg{width:27px;height:27px}}
+
+.journey-status{margin:14px 0 0!important;font-size:13px!important;font-weight:800;color:#803e8f!important}
+.quiz-modes{display:flex;gap:7px;max-width:760px;margin-bottom:13px;flex-wrap:wrap}
+.quiz-modes button{border:1px solid #e5d4ea;background:#fff;color:#785a84;border-radius:100px;padding:9px 15px;font-size:14px;font-weight:800}
+.quiz-modes button.active{background:#642b81;border-color:#642b81;color:#fff}
+.quiz-modes button span{opacity:.7;font-size:12px}
+.quiz-wrap{position:relative;overflow:hidden}
+.quiz-option{position:relative}
+.quiz-option.correct{animation:answer-pop .45s ease}
+.quiz-wrap.right-flash{box-shadow:0 0 0 5px rgba(238,109,169,.14),var(--shadow)}
+@keyframes answer-pop{0%{transform:scale(1)}40%{transform:scale(1.025)}100%{transform:scale(1)}}
+.answer-spark{position:absolute;inset:0;pointer-events:none;overflow:visible}
+.answer-spark span{position:absolute;left:50%;top:50%;color:#d355a5;font-size:20px;animation:spark-fly .8s ease-out forwards}
+@keyframes spark-fly{from{opacity:1;transform:translate(-50%,-50%) scale(.3)}to{opacity:0;transform:translate(calc(-50% + var(--x)),calc(-50% + var(--y))) scale(1.1)}}
+.written-prompt{font:600 26px/1.3 Fraunces,Georgia,serif;margin:0 0 14px}
+.written-instruction{color:#876d91;font-size:14px;margin:0 0 13px}
+.written-answer{display:block;width:100%;min-height:154px;resize:vertical;padding:15px 17px;border:1px solid #decce5;border-radius:13px;background:#fffafd;color:var(--ink);line-height:1.5}
+.written-answer:focus{outline:3px solid #f2bfdd;border-color:#bf74b7}
+.written-actions{display:flex;gap:10px;align-items:center;justify-content:space-between;margin-top:15px;flex-wrap:wrap}
+.written-actions button:disabled{opacity:.45;cursor:not-allowed}
+.marking-points{background:#f9ecfa;border:1px solid #ead5ef;border-radius:14px;padding:19px 21px;margin-top:19px}
+.marking-points h3{font:600 20px Fraunces,Georgia,serif;margin:0 0 9px}
+.marking-points ol{padding-left:20px;margin:0;color:#604b6b}
+.marking-points li{padding:4px 0}
+.marking-points p{font-size:13px;color:#806b89;margin:12px 0 0}
+.written-end{text-align:center;padding:35px 10px}
+.written-end strong{font:700 48px Fraunces,Georgia,serif;color:#8a3e9d}
+.written-end h2{font:600 26px Fraunces,Georgia,serif;margin:7px 0}
+.written-end p{color:#796485}
+.finish-dialog{border:1px solid #eec8e5;border-radius:25px;max-width:min(90vw,510px);padding:38px 42px;text-align:center;background:linear-gradient(145deg,#fff5fa,#f6e5fb);color:var(--ink);box-shadow:0 35px 100px rgba(46,11,68,.3)}
+.finish-dialog::backdrop{background:rgba(37,12,51,.58);backdrop-filter:blur(5px)}
+.finish-dialog h2{font:600 clamp(33px,5vw,48px)/1.1 Fraunces,Georgia,serif;margin:9px 0 14px}
+.finish-dialog h2 span{color:#cf5da5}
+.finish-dialog p{color:#6d5878;margin-bottom:22px}
+.finish-stars{font-size:31px;letter-spacing:16px;color:#d160a5;animation:star-bob 1.8s ease-in-out infinite alternate}
+@keyframes star-bob{to{transform:translateY(-7px) rotate(4deg)}}
+@media(max-width:520px){.quiz-modes{gap:5px}.quiz-modes button{font-size:12px;padding:8px 10px}.written-prompt{font-size:22px}.finish-dialog{padding:28px 24px}}
+@media(prefers-reduced-motion:reduce){.finish-stars,.answer-spark span,.quiz-option.correct{animation:none!important}}

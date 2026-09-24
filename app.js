@@ -55,8 +55,45 @@ const questions = [
   {q:'Which pair captures the two main features of ADHD described in the chapter?',o:['Amnesia and detachment','Inattention and hyperactivity–impulsivity','Bingeing and purging','Delusions and hallucinations'],a:1,e:'The chapter highlights inattention and hyperactivity–impulsivity.'},
   {q:'A recurrent binge followed by purging best matches…',o:['Anorexia nervosa','Bulimia nervosa','Binge-eating disorder','Conversion disorder'],a:1,e:'Bulimia involves bingeing followed by compensatory behaviour such as purging.'},
   {q:'Needing more of a substance to feel the same effect is called…',o:['Withdrawal','Tolerance','Dissociation','Hypervigilance'],a:1,e:'Tolerance is an increased amount needed for a similar effect.'},
-  {q:'Which statement best describes the biopsychosocial view?',o:['One neurotransmitter explains every disorder','Only childhood experiences matter','Biological, psychological, and social factors all matter','Social labels alone cause every disorder'],a:2,e:'The view brings these interacting factors together.'}
+  {q:'Which statement best describes the biopsychosocial view?',o:['One neurotransmitter explains every disorder','Only childhood experiences matter','Biological, psychological, and social factors all matter','Social labels alone cause every disorder'],a:2,e:'The view brings these interacting factors together.'},
+  {q:'Which manual in the chapter is published by the American Psychiatric Association?',o:['ICD-10','DSM-5','The Atharva Veda','A school handbook'],a:1,e:'The chapter names the APA as the publisher of DSM-5.'},
+  {q:'Who prepared the ICD-10 classification described in the chapter?',o:['World Health Organization','American Psychiatric Association','Carl Jung','Sigmund Freud'],a:0,e:'The WHO prepared ICD-10.'},
+  {q:'Which is the clearest example of generalised anxiety in the chapter?',o:['Fear only when seeing a snake','Long-lasting broad worry and tension without one specific object','A memory gap after trauma','A sudden loss of sight'],a:1,e:'Generalised anxiety involves broad, prolonged worry, vigilance, and tension.'},
+  {q:'An intense fear of a particular animal is most like…',o:['A specific phobia','A manic episode','A compulsion','Dissociative amnesia'],a:0,e:'A specific phobia is tied to a particular object or situation.'},
+  {q:'Severe, developmentally inappropriate distress when separated from an attachment figure is…',o:['Agoraphobia','Separation anxiety disorder','Social anxiety disorder','Panic disorder'],a:1,e:'The focus is separation from a significant attachment figure.'},
+  {q:'What is the main contrast between somatic symptom disorder and illness anxiety disorder in the chapter?',o:['One is always voluntary','Bodily complaints versus worry about illness','Memory loss versus identity change','Sadness versus mania'],a:1,e:'The chapter contrasts prominent physical complaints with prominent anxiety about illness.'},
+  {q:'Loss of important personal memories after overwhelming stress best fits…',o:['Dissociative amnesia','Specific phobia','ADHD','Bulimia nervosa'],a:0,e:'Dissociative amnesia involves personal memory loss beyond ordinary forgetting.'},
+  {q:'Feeling detached from oneself or the surroundings is most closely linked to…',o:['Depersonalisation/derealisation','Tolerance','Conduct disorder','Panic disorder'],a:0,e:'This disorder concerns an altered sense of self or reality.'},
+  {q:'Which pair is central to major depressive disorder in the chapter?',o:['High energy and grandiosity','Low mood or loss of interest','Intrusive thought and checking','Inattention and hyperactivity'],a:1,e:'The chapter describes depressed mood and/or loss of interest, along with other symptoms.'},
+  {q:'Bipolar I disorder is described as involving…',o:['Only ordinary daily mood shifts','Episodes of mania and depression','Only phobias','Only memory loss'],a:1,e:'Bipolar I involves manic and depressive episodes, sometimes with usual mood between them.'},
+  {q:'A firmly held belief that strangers’ ordinary actions have a special personal message is a delusion of…',o:['Reference','Persecution','Control','Grandeur'],a:0,e:'Delusions of reference attach special personal meaning to ordinary events or others’ actions.'},
+  {q:'Remaining motionless and silent for long periods is described as…',o:['Catatonic stupor','Hypervigilance','Social learning','Avolition'],a:0,e:'The chapter lists catatonic stupor under psychomotor symptoms.'},
+  {q:'Which pattern best matches autism spectrum disorder as described in the chapter?',o:['Only difficulty with maths','Social communication differences with restricted or repetitive patterns','Repeated binge–purge cycles','Sudden panic attacks'],a:1,e:'The chapter highlights social communication and restricted or repetitive interests and behaviour.'},
+  {q:'Difficulty with reading, writing, or mathematics despite other areas of functioning is most like…',o:['Specific learning disorder','Intellectual disability','Dissociative identity disorder','Conduct disorder'],a:0,e:'Specific learning disorder concerns particular academic skills.'},
+  {q:'Aggression, property damage, theft, or serious rule violations fit which category best?',o:['Conduct disorder','Oppositional defiant disorder','Illness anxiety disorder','Specific phobia'],a:0,e:'The chapter gives these as typical conduct-disorder behaviours.'},
+  {q:'Severe food restriction linked to a distorted body image best matches…',o:['Binge-eating disorder','Anorexia nervosa','Bulimia nervosa','PTSD'],a:1,e:'The chapter describes restrictive eating and distorted body image in anorexia nervosa.'},
+  {q:'Repeated eating episodes with loss of control and no purging pattern best matches…',o:['Binge-eating disorder','Conversion disorder','Panic disorder','Dissociative amnesia'],a:0,e:'Binge-eating disorder features recurrent out-of-control eating without the binge–purge pattern of bulimia.'},
+  {q:'Which is a direct overdose danger of heroin described in the chapter?',o:['Faster reading','Dangerously slowed breathing','Improved concentration','Temporary phobia'],a:1,e:'Heroin overdose can suppress breathing and may be fatal.'}
 ];
+
+const writtenSets={
+  three:[
+    {q:'Distinguish between an obsession and a compulsion.',points:['Define an obsession as a persistent, unwanted thought or idea.','Define a compulsion as a repeated act the person feels driven to perform.','Give one clear example of each, such as contamination thoughts and repeated washing.']},
+    {q:'Why is deviation from a social norm alone not enough to call behaviour abnormal?',points:['Social norms differ across cultures and change over time.','A behaviour must be understood in its situation or context.','Consider distress, dysfunction, wellbeing, and possible danger as well.']},
+    {q:'Explain the diathesis–stress model in three steps.',points:['A person may have a biological predisposition or vulnerability.','A stressful situation can act as a trigger.','Their interaction can increase risk; vulnerability alone does not make the outcome certain.']},
+    {q:'Distinguish a delusion from a hallucination.',points:['A delusion is a firmly held false belief.','A hallucination is a perception without an external stimulus.','Give one example of each, such as a false persecutory belief and hearing a voice.']},
+    {q:'Differentiate anorexia nervosa, bulimia nervosa, and binge-eating disorder.',points:['Anorexia involves severe restriction and distorted body image.','Bulimia involves bingeing followed by compensatory behaviour such as purging.','Binge-eating disorder involves repeated loss-of-control eating without the binge–purge pattern.']},
+    {q:'How do generalised anxiety disorder and panic disorder differ?',points:['Generalised anxiety involves prolonged, broad worry and tension.','Panic disorder involves recurrent abrupt surges of intense fear.','Panic attacks often include physical symptoms such as palpitations or breathlessness.']}
+  ],
+  five:[
+    {q:'Explain five approaches used to understand abnormal behaviour.',points:['Biological: genes, brain processes, or other bodily factors.','Psychodynamic: unconscious conflict and early experiences.','Behavioural: maladaptive responses learned through conditioning or observation.','Cognitive: inaccurate beliefs and faulty thinking.','Sociocultural: family, support networks, labels, and social conditions.']},
+    {q:'Describe the three symptom groups of schizophrenia with examples.',points:['Positive symptoms add experiences or behaviours; examples include delusions.','Hallucinations and disorganised speech are also positive symptoms.','Negative symptoms reduce functioning; examples include poverty of speech or flat affect.','Avolition and social withdrawal are further negative symptoms.','Psychomotor symptoms involve unusual movement or stillness, including catatonic features.']},
+    {q:'Compare the main anxiety disorders described in the chapter.',points:['Generalised anxiety involves prolonged, broad worry and tension.','Panic disorder involves recurrent sudden attacks of intense fear.','Specific phobia focuses on a particular object or situation.','Social anxiety involves strong fear of social evaluation or embarrassment.','Agoraphobia or separation anxiety centres on a distinct situation: unfamiliar/escape-limited places or separation from an attachment figure.']},
+    {q:'Distinguish somatic symptom and related disorders from dissociative disorders.',points:['Somatic symptom disorder involves distressing bodily symptoms and excessive concern.','Illness anxiety centres on fear of serious illness.','Conversion involves altered motor or sensory functioning in the chapter account.','Dissociation involves disruption in memory, identity, or sense of reality.','Examples include dissociative amnesia and depersonalisation/derealisation.']},
+    {q:'Describe four neurodevelopmental disorders and one way they differ.',points:['ADHD involves inattention and/or hyperactivity–impulsivity.','Autism spectrum disorder involves social communication differences and restricted/repetitive patterns.','Intellectual disability involves limitations in intellectual and adaptive functioning.','Specific learning disorder concerns reading, writing, or mathematics skills.','Specific learning difficulty is not the same as a global intellectual limitation.']},
+    {q:'Explain substance dependence using alcohol, heroin, or cocaine examples.',points:['Repeated use can interfere with work, relationships, and thinking.','Tolerance means needing more for a similar effect.','Withdrawal can occur after reducing or stopping use.','Alcohol can impair judgment, memory, and coordination; cocaine can affect attention and mood.','Heroin overdose can dangerously slow breathing.']}
+  ]
+};
 
 const branches = [
   {name:'What counts as abnormal?',title:'Begin with context',text:'The four Ds help you ask better questions. A behaviour can look unusual without being a disorder.',bullets:['Deviance depends partly on social norms.','Distress and dysfunction tell you more about impact.','Danger may matter, but it is not present in every case.'],note:'four-ds'},
@@ -74,6 +111,9 @@ const matchPairs = [
 
 const saved = (key,fallback) => {try {return JSON.parse(localStorage.getItem(key)) ?? fallback} catch{return fallback}};
 let checks=saved('mindbloom-checks',[]), best=saved('mindbloom-best',0), noteIndex=0, mapIndex=0;
+let milestones=saved('psychnotes-milestones',{});
+let writtenProgress=saved('psychnotes-written',{});
+for(const mode of ['three','five']){writtenProgress[mode] ??={};writtenProgress[mode].index ??=0;writtenProgress[mode].answers ??={};writtenProgress[mode].reviewed ??={};writtenProgress[mode].completed ??=false}
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 const save=(key,value)=>localStorage.setItem(key,JSON.stringify(value));
 const shuffle=a=>[...a].sort(()=>Math.random()-.5);
@@ -83,7 +123,9 @@ $$('[data-view],[data-goto]').forEach(b=>b.addEventListener('click',()=>showView
 
 const checklist=['Explain the four Ds with context','Compare the major models','Distinguish obsession from compulsion','Sort anxiety, trauma, somatic and dissociative patterns','Identify positive, negative and psychomotor symptoms','Contrast ADHD, autism and learning disorders','Compare eating disorders and explain tolerance'];
 function renderChecks(){const box=$('#checklist');box.innerHTML=checklist.map((c,i)=>`<label class="check-row"><input type="checkbox" data-check="${i}" ${checks.includes(i)?'checked':''}><span>${c}</span></label>`).join('');$$('[data-check]').forEach(input=>input.addEventListener('change',()=>{checks=$$('[data-check]:checked').map(x=>Number(x.dataset.check));save('mindbloom-checks',checks);updateProgress()}));updateProgress()}
-function updateProgress(){const pct=Math.round((checks.length/checklist.length)*100);$('#sidePercent').textContent=pct+'%';$('#homePercent').textContent=pct+'%';$('#sideBar').style.width=pct+'%'}
+function updateProgress(){const pct=Math.round((checks.length/checklist.length)*100);$('#sidePercent').textContent=pct+'%';$('#homePercent').textContent=pct+'%';$('#sideBar').style.width=pct+'%';const done=Number(checks.length===checklist.length)+['cards','mcq','written','match'].filter(k=>milestones[k]).length;$('#journeyStatus').textContent=`${done} of 5 study challenges finished`;if(done===5&&!saved('psychnotes-celebrated',false)){save('psychnotes-celebrated',true);setTimeout(()=>$('#finishDialog').showModal(),300)}}
+function setMilestone(name){if(milestones[name])return;milestones[name]=true;save('psychnotes-milestones',milestones);updateProgress()}
+$('#finishClose').addEventListener('click',()=>{$('#finishDialog').close();showView('home')});
 
 function renderTopicList(query=''){const q=query.trim().toLowerCase();const found=notes.filter(n=>[n.title,n.group,n.summary,...n.tags,...n.points].join(' ').toLowerCase().includes(q));$('#notesCount').textContent=`${found.length} topic${found.length===1?'':'s'}`;$('#topicList').innerHTML=found.length?found.map(n=>`<button class="topic-button ${notes[noteIndex].id===n.id?'active':''}" data-note="${n.id}"><small>${n.group.toUpperCase()}</small>${n.title}</button>`).join(''):'<div class="empty">No matching notes. Try a different word.</div>';$$('[data-note]').forEach(b=>b.addEventListener('click',()=>{noteIndex=notes.findIndex(n=>n.id===b.dataset.note);renderTopicList($('#noteSearch').value);renderNote()}));if(found.length&&!found.some(n=>n.id===notes[noteIndex].id)){noteIndex=notes.indexOf(found[0]);renderNote()}}
 function renderNote(){const n=notes[noteIndex];$('#noteDetail').innerHTML=`<span class="eyebrow">${n.group.toUpperCase()} · PDF PAGES ${n.pages}</span><h2>${n.title}</h2><p>${n.summary}</p><div class="chip-row">${n.tags.map(t=>`<span class="chip">${t}</span>`).join('')}</div><ul>${n.points.map(p=>`<li>${p}</li>`).join('')}</ul><div class="note-callout"><strong>Remember this</strong><p>${n.takeaway}</p></div><p class="source-page">Paraphrased from the attached chapter, printed pages ${n.pages}. <a href="https://ncert.nic.in/textbook/pdf/lepy104.pdf" target="_blank" rel="noopener">Open PDF ↗</a></p>`}
@@ -96,20 +138,81 @@ function resetDeck(){const filter=$('#deckFilter').value;deck=shuffle(cards.filt
 function renderCard(){if(!deck.length){$('#cardQuestion').textContent='Deck complete ✦';$('#cardAnswer').textContent='You grew your recall. Switch decks or replay to keep going.';$('#cardCategory').textContent='NICE WORK';$('#cardCounter').textContent=`${known} learned`;$('#flashcard').classList.remove('flipped');$('#cardGotIt').disabled=true;$('#cardAgain').disabled=true;return}const c=deck[cardPos];$('#flashcard').classList.remove('flipped');flipped=false;$('.flash-front').setAttribute('aria-hidden','false');$('.flash-back').setAttribute('aria-hidden','true');$('#cardQuestion').textContent=c[0];$('#cardAnswer').textContent=c[1];$('#cardCategory').textContent=c[2]==='basics'?'CORE IDEAS':c[2]==='models'?'EXPLANATION MODELS':'DISORDER GROUPS';$('#cardCounter').textContent=`Card ${cardPos+1} of ${deck.length} · ${known} learned`;$('#cardGotIt').disabled=false;$('#cardAgain').disabled=false}
 $('#flashcard').addEventListener('click',()=>{flipped=!flipped;$('#flashcard').classList.toggle('flipped',flipped);$('.flash-front').setAttribute('aria-hidden',String(flipped));$('.flash-back').setAttribute('aria-hidden',String(!flipped))});
 $('#deckFilter').addEventListener('change',resetDeck);
-$('#cardGotIt').addEventListener('click',()=>{if(!deck.length)return;deck.splice(cardPos,1);known++;if(cardPos>=deck.length)cardPos=0;renderCard();$('#cardStatus').textContent='Nice. That card is out of this round.'});
+$('#cardGotIt').addEventListener('click',()=>{if(!deck.length)return;deck.splice(cardPos,1);known++;if(cardPos>=deck.length)cardPos=0;renderCard();if(!deck.length&&$('#deckFilter').value==='all')setMilestone('cards');$('#cardStatus').textContent=deck.length?'Nice. That card is out of this round.':'All cards done. That’s a full recall round!'});
 $('#cardAgain').addEventListener('click',()=>{if(!deck.length)return;const c=deck.splice(cardPos,1)[0];deck.push(c);if(cardPos>=deck.length)cardPos=0;renderCard();$('#cardStatus').textContent='No pressure — it will come back later.'});
 
-let quizOrder=[],quizPos=0,quizCorrect=0,quizAnswered=false;
-function startQuiz(){quizOrder=shuffle(questions);quizPos=0;quizCorrect=0;quizAnswered=false;renderQuiz()}
-function renderQuiz(){const total=quizOrder.length;$('#quizNumber').textContent=quizPos<total?`Question ${quizPos+1} / ${total}`:'Round complete';$('#quizScore').textContent=`${quizCorrect} correct`;$('#quizProgress').style.width=`${Math.round(quizPos/total*100)}%`;$('#quizNext').disabled=true;if(quizPos>=total){best=Math.max(best,quizCorrect);save('mindbloom-best',best);$('#quizProgress').style.width='100%';$('#quizBody').innerHTML=`<div class="quiz-end"><strong>${quizCorrect}/${total}</strong><h2>${quizCorrect>=12?'Your ideas are blooming ✦':'Keep growing ✦'}</h2><p>Best round: ${best}/${total}. Review the explanations, then try again.</p></div>`;$('#quizNext').textContent='Play again →';$('#quizNext').disabled=false;return}$('#quizNext').textContent='Next question →';const q=quizOrder[quizPos];$('#quizBody').innerHTML=`<h2 class="quiz-prompt">${q.q}</h2><div class="quiz-options">${q.o.map((x,i)=>`<button class="quiz-option" data-answer="${i}">${x}</button>`).join('')}</div><div id="quizFeedback" aria-live="polite"></div>`;$$('[data-answer]').forEach(b=>b.addEventListener('click',()=>answerQuiz(Number(b.dataset.answer))))}
-function answerQuiz(choice){if(quizAnswered)return;quizAnswered=true;const q=quizOrder[quizPos],right=choice===q.a;if(right)quizCorrect++;$('#quizScore').textContent=`${quizCorrect} correct`;$$('[data-answer]').forEach(b=>{const i=Number(b.dataset.answer);b.disabled=true;if(i===q.a)b.classList.add('correct');else if(i===choice)b.classList.add('wrong')});$('#quizFeedback').innerHTML=`<div class="quiz-feedback"><strong>${right?'Yes — that’s it! ✦':'Good try — here’s the link.'}</strong><p>${q.e}</p></div>`;$('#quizNext').disabled=false}
-$('#quizNext').addEventListener('click',()=>{if(quizPos>=quizOrder.length){startQuiz();return}if(!quizAnswered)return;quizPos++;quizAnswered=false;renderQuiz()});$('#quizRestart').addEventListener('click',startQuiz);
+let quizOrder=[],quizPos=0,quizCorrect=0,quizAnswered=false,activeQuizMode='mcq';
+$('#mcqTotal').textContent='· 20 Q';
+function startQuiz(){quizOrder=shuffle(questions).slice(0,20);quizPos=0;quizCorrect=0;quizAnswered=false;renderQuiz()}
+function renderQuiz(){
+  const total=quizOrder.length;
+  $('#quizNumber').textContent=quizPos<total?`Question ${quizPos+1} / ${total}`:'Round complete';
+  $('#quizScore').textContent=`${quizCorrect} correct`;
+  $('#quizProgress').style.width=`${Math.round(quizPos/total*100)}%`;
+  $('#quizNext').disabled=true;
+  if(quizPos>=total){
+    best=Math.max(best,quizCorrect);save('mindbloom-best',best);setMilestone('mcq');
+    $('#quizProgress').style.width='100%';
+    $('#quizBody').innerHTML=`<div class="quiz-end"><strong>${quizCorrect}/${total}</strong><h2>${quizCorrect>=15?'You know your stuff ✦':'Good work sticking with it ✦'}</h2><p>Best round: ${best}/${total}. Replay for a fresh mix from the question bank.</p></div>`;
+    $('#quizNext').textContent='Play again →';$('#quizNext').disabled=false;return;
+  }
+  $('#quizNext').textContent='Next question →';
+  const q=quizOrder[quizPos];
+  $('#quizBody').innerHTML=`<h2 class="quiz-prompt">${q.q}</h2><div class="quiz-options">${q.o.map((x,i)=>`<button class="quiz-option" data-answer="${i}">${x}</button>`).join('')}</div><div id="quizFeedback" aria-live="polite"></div>`;
+  $$('[data-answer]').forEach(b=>b.addEventListener('click',()=>answerQuiz(Number(b.dataset.answer))));
+}
+function burstCorrect(button){
+  const burst=document.createElement('span');burst.className='answer-spark';burst.setAttribute('aria-hidden','true');
+  [[-95,-38],[-62,-75],[-18,-88],[30,-82],[83,-44],[-75,35],[4,66],[76,38]].forEach(([x,y],i)=>{const star=document.createElement('span');star.textContent=i%3?'✦':'✧';star.style.setProperty('--x',`${x}px`);star.style.setProperty('--y',`${y}px`);burst.append(star)});
+  button.append(burst);$('#quizWrap').classList.add('right-flash');
+  setTimeout(()=>{burst.remove();$('#quizWrap').classList.remove('right-flash')},850);
+}
+function answerQuiz(choice){
+  if(quizAnswered)return;quizAnswered=true;
+  const q=quizOrder[quizPos],right=choice===q.a;if(right)quizCorrect++;
+  $('#quizScore').textContent=`${quizCorrect} correct`;
+  $$('[data-answer]').forEach(b=>{const i=Number(b.dataset.answer);b.disabled=true;if(i===q.a)b.classList.add('correct');else if(i===choice)b.classList.add('wrong')});
+  if(right)burstCorrect($(`[data-answer="${choice}"]`));
+  $('#quizFeedback').innerHTML=`<div class="quiz-feedback"><strong>${right?'Yes! ✦ You got it.':'Good try — here’s the link.'}</strong><p>${q.e}</p></div>`;
+  $('#quizNext').disabled=false;
+}
+$('#quizNext').addEventListener('click',()=>{if(quizPos>=quizOrder.length){startQuiz();return}if(!quizAnswered)return;quizPos++;quizAnswered=false;renderQuiz()});
+$('#quizRestart').addEventListener('click',startQuiz);
+
+function switchQuizMode(mode){
+  activeQuizMode=mode;
+  $$('[data-quiz-mode]').forEach(b=>{const selected=b.dataset.quizMode===mode;b.classList.toggle('active',selected);b.setAttribute('aria-selected',String(selected))});
+  $('#quizMcqPanel').hidden=mode!=='mcq';$('#quizWrittenPanel').hidden=mode==='mcq';
+  if(mode!=='mcq')renderWritten();
+}
+$$('[data-quiz-mode]').forEach(b=>b.addEventListener('click',()=>switchQuizMode(b.dataset.quizMode)));
+function saveWritten(){save('psychnotes-written',writtenProgress)}
+function renderWritten(){
+  const mode=activeQuizMode,set=writtenSets[mode],state=writtenProgress[mode],total=set.length;
+  const reviewed=Object.values(state.reviewed).filter(Boolean).length;
+  $('#writtenNumber').textContent=mode==='three'?'3-mark practice':'5-mark practice';
+  $('#writtenCount').textContent=`${reviewed} / ${total} checked`;
+  $('#writtenProgress').style.width=`${Math.round(reviewed/total*100)}%`;
+  if(state.index>=total){
+    $('#writtenBody').innerHTML=`<div class="written-end"><strong>${total}/${total}</strong><h2>${mode==='three'?'3-mark set complete ✦':'5-mark set complete ✦'}</h2><p>You tried every answer and compared it with the key points.</p><button class="secondary" id="revisitWritten">Revisit answers ↶</button></div>`;
+    $('#revisitWritten').addEventListener('click',()=>{state.index=0;saveWritten();renderWritten()});return;
+  }
+  const item=set[state.index],done=Boolean(state.reviewed[state.index]);
+  $('#writtenBody').innerHTML=`<h2 class="written-prompt">${item.q}</h2><p class="written-instruction">Write a short answer first. Then compare it with the ${mode==='three'?'three':'five'} points below.</p><textarea class="written-answer" id="writtenAnswer" aria-label="Your written answer" placeholder="Type a few lines or bullet points…"></textarea><div class="written-actions"><button class="secondary" id="writtenReveal">Show marking points</button><button class="primary" id="writtenNext" ${done?'':'disabled'}>${state.index===total-1?'Finish set':'Next question'} →</button></div><div id="markScheme" aria-live="polite"></div>`;
+  $('#writtenAnswer').value=state.answers[state.index]||'';
+  $('#writtenReveal').disabled=$('#writtenAnswer').value.trim().length<5;
+  $('#writtenAnswer').addEventListener('input',e=>{state.answers[state.index]=e.target.value;saveWritten();$('#writtenReveal').disabled=e.target.value.trim().length<5});
+  $('#writtenReveal').addEventListener('click',()=>{state.reviewed[state.index]=true;saveWritten();showMarkingPoints(item);$('#writtenReveal').hidden=true;$('#writtenNext').disabled=false;$('#writtenCount').textContent=`${Object.values(state.reviewed).filter(Boolean).length} / ${total} checked`;$('#writtenProgress').style.width=`${Math.round(Object.values(state.reviewed).filter(Boolean).length/total*100)}%`});
+  $('#writtenNext').addEventListener('click',()=>{if(!state.reviewed[state.index])return;state.index++;if(state.index>=total){state.completed=true;if(writtenProgress.three.completed&&writtenProgress.five.completed)setMilestone('written')}saveWritten();renderWritten()});
+  if(done){showMarkingPoints(item);$('#writtenReveal').hidden=true}
+}
+function showMarkingPoints(item){$('#markScheme').innerHTML=`<div class="marking-points"><h3>Points to include</h3><ol>${item.points.map(p=>`<li>${p}</li>`).join('')}</ol><p>A helpful self-check based on the chapter, not an official marking scheme.</p></div>`}
 
 let pairRound=[],selectedTerm=null,selectedDef=null,matched=new Set();
 function newMatch(){pairRound=shuffle(matchPairs).slice(0,6).map(([term,definition])=>({term,definition}));selectedTerm=null;selectedDef=null;matched=new Set();renderMatch();$('#matchMessage').textContent='Choose a term to begin.'}
 function renderMatch(){const terms=shuffle(pairRound.map((p,i)=>({text:p.term,i}))),defs=shuffle(pairRound.map((p,i)=>({text:p.definition,i})));$('#matchTerms').innerHTML=terms.map(x=>`<button class="match-item ${matched.has(x.i)?'matched':''} ${selectedTerm===x.i?'selected':''}" data-term="${x.i}" ${matched.has(x.i)?'disabled':''}>${x.text}</button>`).join('');$('#matchDefinitions').innerHTML=defs.map(x=>`<button class="match-item ${matched.has(x.i)?'matched':''} ${selectedDef===x.i?'selected':''}" data-def="${x.i}" ${matched.has(x.i)?'disabled':''}>${x.text}</button>`).join('');$('#matchScore').textContent=`${matched.size} / 6 paired`;$$('[data-term]').forEach(b=>b.addEventListener('click',()=>{selectedTerm=Number(b.dataset.term);updateMatchSelection();checkMatch()}));$$('[data-def]').forEach(b=>b.addEventListener('click',()=>{selectedDef=Number(b.dataset.def);updateMatchSelection();checkMatch()}))}
 function updateMatchSelection(){$$('[data-term]').forEach(b=>b.classList.toggle('selected',Number(b.dataset.term)===selectedTerm));$$('[data-def]').forEach(b=>b.classList.toggle('selected',Number(b.dataset.def)===selectedDef))}
-function checkMatch(){if(selectedTerm===null||selectedDef===null)return;if(selectedTerm===selectedDef){matched.add(selectedTerm);$('#matchMessage').textContent=matched.size===6?'Perfect match! Your concept links are getting stronger. ✦':'Lovely match. Keep going!';selectedTerm=null;selectedDef=null;renderMatch()}else{$('#matchMessage').textContent='Not quite — try another connection.';selectedDef=null;selectedTerm=null;updateMatchSelection()}}
+function checkMatch(){if(selectedTerm===null||selectedDef===null)return;if(selectedTerm===selectedDef){matched.add(selectedTerm);$('#matchMessage').textContent=matched.size===6?'Perfect match! Your concept links are getting stronger. ✦':'Lovely match. Keep going!';selectedTerm=null;selectedDef=null;renderMatch();if(matched.size===6)setMilestone('match')}else{$('#matchMessage').textContent='Not quite — try another connection.';selectedDef=null;selectedTerm=null;updateMatchSelection()}}
 $('#matchReset').addEventListener('click',newMatch);
 
 renderChecks();renderTopicList();renderNote();renderMap();resetDeck();startQuiz();newMatch();
